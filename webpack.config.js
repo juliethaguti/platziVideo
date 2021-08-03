@@ -51,6 +51,10 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    port: 3002,
+    historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
@@ -60,10 +64,4 @@ module.exports = {
       filename: 'assets/[name].css',
     }),
   ],
-  devServer: {
-    /* contentBase: path.join( __dirname, 'dist' ),
-        compress: true,
-        historyApiFallback: true, */
-    port: 3001,
-  },
 };
